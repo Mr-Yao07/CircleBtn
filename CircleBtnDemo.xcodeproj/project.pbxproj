@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D45B2D2E02FA187A17AF481 /* libPods-CircleBtnDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 08198D91B66823ACB665736F /* libPods-CircleBtnDemo.a */; };
 		C37C979D20B7ED06007EEC63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C37C979C20B7ED06007EEC63 /* AppDelegate.m */; };
 		C37C97A020B7ED06007EEC63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C37C979F20B7ED06007EEC63 /* ViewController.m */; };
 		C37C97A320B7ED06007EEC63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C37C97A120B7ED06007EEC63 /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03900EA5DE9CB9B92EF3C7A2 /* Pods-CircleBtnDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleBtnDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CircleBtnDemo/Pods-CircleBtnDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		08198D91B66823ACB665736F /* libPods-CircleBtnDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CircleBtnDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37C979820B7ED05007EEC63 /* CircleBtnDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleBtnDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C37C979B20B7ED06007EEC63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C37C979C20B7ED06007EEC63 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		C37C97C120B7ED09007EEC63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C37C97D120B7EFA4007EEC63 /* CircleBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleBtn.h; sourceTree = "<group>"; };
 		C37C97D220B7EFA4007EEC63 /* CircleBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleBtn.m; sourceTree = "<group>"; };
+		FCA08435D635DF9819BF8589 /* Pods-CircleBtnDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CircleBtnDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CircleBtnDemo/Pods-CircleBtnDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D45B2D2E02FA187A17AF481 /* libPods-CircleBtnDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		287CDEA55E043ED7EDC47518 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03900EA5DE9CB9B92EF3C7A2 /* Pods-CircleBtnDemo.debug.xcconfig */,
+				FCA08435D635DF9819BF8589 /* Pods-CircleBtnDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7D24D6F12450271B45DB940F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08198D91B66823ACB665736F /* libPods-CircleBtnDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C37C978F20B7ED05007EEC63 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +111,8 @@
 				C37C97B320B7ED09007EEC63 /* CircleBtnDemoTests */,
 				C37C97BE20B7ED09007EEC63 /* CircleBtnDemoUITests */,
 				C37C979920B7ED05007EEC63 /* Products */,
+				287CDEA55E043ED7EDC47518 /* Pods */,
+				7D24D6F12450271B45DB940F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +176,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C37C97C420B7ED09007EEC63 /* Build configuration list for PBXNativeTarget "CircleBtnDemo" */;
 			buildPhases = (
+				0522C400089AB95609319E06 /* [CP] Check Pods Manifest.lock */,
 				C37C979420B7ED05007EEC63 /* Sources */,
 				C37C979520B7ED05007EEC63 /* Frameworks */,
 				C37C979620B7ED05007EEC63 /* Resources */,
@@ -269,6 +294,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0522C400089AB95609319E06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CircleBtnDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C37C979420B7ED05007EEC63 /* Sources */ = {
@@ -445,15 +491,13 @@
 		};
 		C37C97C520B7ED09007EEC63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03900EA5DE9CB9B92EF3C7A2 /* Pods-CircleBtnDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6759243643;
 				INFOPLIST_FILE = CircleBtnDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.linhong.CircleBtnDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -462,15 +506,13 @@
 		};
 		C37C97C620B7ED09007EEC63 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FCA08435D635DF9819BF8589 /* Pods-CircleBtnDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6759243643;
 				INFOPLIST_FILE = CircleBtnDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.linhong.CircleBtnDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -484,11 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQ6F8T4EUE;
 				INFOPLIST_FILE = CircleBtnDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.linhong.CircleBtnDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -503,11 +541,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQ6F8T4EUE;
 				INFOPLIST_FILE = CircleBtnDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.linhong.CircleBtnDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -521,11 +555,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQ6F8T4EUE;
 				INFOPLIST_FILE = CircleBtnDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.linhong.CircleBtnDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -539,11 +569,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JQ6F8T4EUE;
 				INFOPLIST_FILE = CircleBtnDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.linhong.CircleBtnDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
