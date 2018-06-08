@@ -17,14 +17,14 @@ Pod::Spec.new do |s|
 
   s.name         = "CircleBtn"
   s.version      = "0.0.1"
-  s.summary      = " simple circle btn "
+  s.summary      = "simple circle button"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  =  " simple circle btn "
+  s.description  = "simple circle button"
 
   s.homepage     = "https://github.com/yaolinhong/CircleBtn"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -63,7 +63,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  # s.platform     = :ios, "5.0"
+  s.platform     = :ios, "9.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = "https://github.com/yaolinhong/CircleBtn.git"
+  s.source       = { :git => "https://github.com/yaolinhong/CircleBtn", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,8 +89,8 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "CircleBtn/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "CircleBtn", "CircleBtn/**/*.{h,m}"
+  s.exclude_files = "CircleBtn/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 

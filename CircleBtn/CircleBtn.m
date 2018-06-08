@@ -20,7 +20,15 @@
 
 
 @interface CircleBtn()
+
+/**
+ 大圆的半径
+ */
 @property(nonatomic,assign)CGFloat bigRadius;
+
+/**
+ 小圆的半径
+ */
 @property(nonatomic,assign)CGFloat smallRadius;
 @end
 
@@ -37,11 +45,13 @@
         CGFloat spaceAngle = (M_PI*2)*(1/num);
         for (int i = 0; i<num; i++) {
             
+//          绘制曲线
             UIBezierPath *path = [UIBezierPath bezierPath];
             [path addArcWithCenter:center radius:_bigRadius startAngle:startAngle endAngle:startAngle + spaceAngle clockwise:YES];
             [path addArcWithCenter:center radius:_smallRadius startAngle:startAngle + spaceAngle endAngle:startAngle clockwise:NO];
             [path closePath];
             
+//          根据曲线绘制视图
             TouchLayer *layer = [TouchLayer layer];
             UIColor *color = colorArray[i];
             layer.fillColor = color.CGColor;
@@ -55,7 +65,7 @@
             
             startAngle = startAngle + spaceAngle;
         }
-        
+//      中心圆的绘制
         UIBezierPath *path = [UIBezierPath bezierPath];
         [path addArcWithCenter:center radius:_smallRadius-3 startAngle:0 endAngle:M_PI*2 clockwise:YES];
         TouchLayer *layer = [TouchLayer layer];
@@ -75,6 +85,9 @@
         if (CGPathContainsPoint(layer.path, &CGAffineTransformIdentity, [touches.anyObject locationInView:self], 0) && layer.isSelected == NO) {
             NSLog(@"点到了我,我是第%ld个",(long)layer.selectIndex);
             layer.isSelected = YES;
+            self.isSelected = layer.isSelected;
+            self.clickBlock(layer.selectIndex);
+            
             //原始中心点为（0，0），扇形所在圆心、原始中心点、偏移点三者是在一条直线，通过三角函数即可得到偏移点的对应x，y。
             CGPoint currPos = layer.position;
             if (layer.selectIndex==88) {
@@ -91,10 +104,12 @@
             //            NSLog(@"没有点到我，不关我的事");
             layer.position = CGPointMake(0, 0);
             layer.isSelected = NO;
+            self.isSelected = layer.isSelected;
             if (layer.selectIndex==88) {
                 UIBezierPath *path = [UIBezierPath bezierPath];
                 [path addArcWithCenter:center radius:_smallRadius-3 startAngle:0 endAngle:M_PI*2 clockwise:YES];
                 layer.path = path.CGPath;
+                self.clickBlock(layer.selectIndex);
             }
             
         }

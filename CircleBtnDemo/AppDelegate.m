@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ReactiveObjC.h"
 @interface AppDelegate ()
 
 @end
@@ -17,9 +17,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    [self setRootController];
+    
+    
     return YES;
 }
+-(void)setRootController{
+    
+    UITabBarController *tabVC = [[UITabBarController alloc]init];
+    
+    UIViewController *vc = [[NSClassFromString(@"ViewController") alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    nav.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"首页" image:nil selectedImage:nil];
 
+    tabVC.viewControllers = @[nav];
+    self.window.rootViewController = tabVC;
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

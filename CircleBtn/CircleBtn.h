@@ -15,4 +15,14 @@
 
 @interface CircleBtn : UIView
 -(instancetype)initWithFrame:(CGRect)frame;
+
+/**
+ 事件响应回调
+ */
+@property (nonatomic,copy)void (^clickBlock)(NSInteger value);
+
+/**
+ 视图选中状态
+ */
+@property (nonatomic,assign)BOOL isSelected;
 @end
